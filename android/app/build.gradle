@@ -78,6 +78,12 @@ import org.apache.tools.ant.taskdefs.condition.Os
  * ]
  */
 
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'MaterialCommunityIcons.ttf' ] 
+]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 project.ext.react = [
     enableHermes: false,  // clean and rebuild if changing
 ]
