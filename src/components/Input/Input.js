@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import styles from './Input.styles';
 
-const Login = ({placeholder, value, onType, iconName, isSecure}) => {
+const Input = ({placeholder, value, onType, iconName, isSecure}) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -20,4 +20,4 @@ const Login = ({placeholder, value, onType, iconName, isSecure}) => {
   );
 };
 
-export default Login;
+export default Input;
