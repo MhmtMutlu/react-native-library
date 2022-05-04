@@ -14,11 +14,7 @@ const Router = () => {
           name="LoginScreen"
           component={Login}
           options={{
-            title: 'Details',
-            headerStyle: {backgroundColor: '#e0e0e0'},
-            headerTitleStyle: {color: '#495057'},
-            headerTintColor: '#495057',
-            headerTitleAlign: 'center',
+            headerShown: false,
           }}
         />
       </Stack.Navigator>
