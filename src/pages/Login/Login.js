@@ -10,25 +10,24 @@ const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logo}></View>
-      <Formik
-        initialValues={{username: '', password: ''}}
-        onSubmit={() => null}>
+      <Formik initialValues={{email: '', password: ''}} onSubmit={() => null}>
         {({handleSubmit, handleChange, values}) => (
           <View style={styles.body_container}>
             <Input
-              placeholder="Username .."
-              value={values.username}
-              onType={handleChange('username')}
+              placeholder="Email ..."
+              value={values.email}
+              onType={handleChange('email')}
               iconName="account"
             />
             <Input
               isSecure
-              placeholder="Password .."
+              placeholder="Şifre ..."
               value={values.password}
               onType={handleChange('password')}
               iconName="key"
             />
-            <Button text="LogIn" onPress={handleSubmit} />
+            <Button text="Giriş Yap" onPress={handleSubmit} />
+            <Button text="Kayıt Ol" theme="secondary" onPress={handleSubmit} />
           </View>
         )}
       </Formik>

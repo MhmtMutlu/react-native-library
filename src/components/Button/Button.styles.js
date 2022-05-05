@@ -19,24 +19,22 @@ export default {
     ...base_style,
     container: {
       ...base_style.container,
-      backgroundColor: colors.grey,
+      backgroundColor: colors.darkGrey2x,
     },
     title: {
       ...base_style.title,
-      color: '#efefef',
+      color: colors.white,
     },
   }),
   secondary: StyleSheet.create({
     ...base_style,
     container: {
       ...base_style.container,
-      borderWidth: 1,
-      borderColor: colors.grey,
-      backgroundColor: '#efefef',
+      backgroundColor: colors.lightGrey3x,
     },
     title: {
       ...base_style.title,
-      color: colors.grey,
+      color: colors.darkGrey2x,
     },
   }),
 };

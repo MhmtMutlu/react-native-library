@@ -1,14 +1,17 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../assets/styles/colors';
 
 export default StyleSheet.create({
   container: {
-    paddingVertical: 3,
+    paddingVertical: 1,
     paddingHorizontal: 10,
+    borderRadius: 10,
     margin: 10,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: colors.lightGrey3x,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    color: colors.darkGrey2x,
   },
   input: {
     flex: 1,
