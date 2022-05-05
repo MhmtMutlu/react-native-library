@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {Image, SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
 
 import styles from './Login.styles';
@@ -9,7 +9,13 @@ import Button from '../../components/Button';
 const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.logo}></View>
+      <View style={styles.logo_container}>
+        <Image
+          style={styles.logo}
+          source={require('../../assets/images/library.png')}
+        />
+        <Text style={styles.title}>Kitaplık</Text>
+      </View>
       <Formik initialValues={{email: '', password: ''}} onSubmit={() => null}>
         {({handleSubmit, handleChange, values}) => (
           <View style={styles.body_container}>
