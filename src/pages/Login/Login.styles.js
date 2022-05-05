@@ -23,4 +23,5 @@ export default StyleSheet.create({
   },
   title: {marginTop: 20, fontSize: 34, fontWeight: 'bold', color: colors.white},
   body_container: {flex: 0.4},
+  button_wrapper: {marginTop: 10},
 });

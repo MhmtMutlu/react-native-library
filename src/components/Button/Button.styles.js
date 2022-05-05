@@ -4,7 +4,7 @@ import colors from '../../assets/styles/colors';
 const base_style = StyleSheet.create({
   container: {
     padding: 10,
-    margin: 10,
+    margin: 5,
     alignItems: 'center',
     borderRadius: 10,
   },

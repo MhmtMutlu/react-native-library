@@ -32,8 +32,14 @@ const Login = () => {
               onType={handleChange('password')}
               iconName="key"
             />
-            <Button text="Giriş Yap" onPress={handleSubmit} />
-            <Button text="Kayıt Ol" theme="secondary" onPress={handleSubmit} />
+            <View style={styles.button_wrapper}>
+              <Button text="Giriş Yap" onPress={handleSubmit} />
+              <Button
+                text="Kayıt Ol"
+                theme="secondary"
+                onPress={handleSubmit}
+              />
+            </View>
           </View>
         )}
       </Formik>
