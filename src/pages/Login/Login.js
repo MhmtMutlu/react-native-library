@@ -9,6 +9,7 @@ import Button from '../../components/Button';
 const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.logo}></View>
       <Formik
         initialValues={{username: '', password: ''}}
         onSubmit={() => null}>
