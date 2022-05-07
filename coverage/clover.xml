@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1651957919158" clover="3.2.0">
+  <project timestamp="1651957919158" name="All files">
+    <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1" elements="8" coveredelements="8" complexity="0" loc="4" ncloc="4" packages="2" files="4" classes="4"/>
+    <package name="assets.styles">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="colors.js" path="C:\Users\Public\patika\ReactNativeProjects\myLibrary\src\assets\styles\colors.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Button">
+      <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="Button.js" path="C:\Users\Public\patika\ReactNativeProjects\myLibrary\src\components\Button\Button.js">
+        <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="5" type="stmt"/>
+      </file>
+      <file name="Button.styles.js" path="C:\Users\Public\patika\ReactNativeProjects\myLibrary\src\components\Button\Button.styles.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\Users\Public\patika\ReactNativeProjects\myLibrary\src\components\Button\index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

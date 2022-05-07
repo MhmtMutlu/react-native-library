@@ -6,13 +6,16 @@ import styles from './Button.styles';
 const Button = ({text, onPress, loading, theme = 'primary'}) => {
   return (
     <TouchableOpacity
+      testID="button-touchable"
       style={styles[theme].container}
       onPress={onPress}
       disabled={loading}>
       {loading ? (
-        <ActivityIndicator color="white" />
+        <ActivityIndicator testID="button-indicator" color="white" />
       ) : (
-        <Text style={styles[theme].title}>{text}</Text>
+        <Text testID="button-text" style={styles[theme].title}>
+          {text}
+        </Text>
       )}
     </TouchableOpacity>
   );
