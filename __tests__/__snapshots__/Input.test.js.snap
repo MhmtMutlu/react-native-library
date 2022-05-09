@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#e0e0e0",
+      "borderRadius": 10,
+      "color": "#343a40",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "margin": 10,
+      "paddingHorizontal": 10,
+      "paddingVertical": 1,
+    }
+  }
+>
+  <TextInput
+    placeholderTextColor="#343a40"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    testID="text-input"
+  />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      Array [
+        Object {
+          "color": "#343a40",
+          "fontSize": 25,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Material Design Icons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
+`;

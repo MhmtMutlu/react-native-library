@@ -10,6 +10,7 @@ const Input = ({placeholder, value, onType, iconName, isSecure}) => {
   return (
     <View style={styles.container}>
       <TextInput
+        testID="text-input"
         style={styles.input}
         value={value}
         placeholder={placeholder}
