@@ -8,7 +8,7 @@ import styles from './Input.styles';
 
 const Input = ({placeholder, value, onType, iconName, isSecure}) => {
   return (
-    <View style={styles.container}>
+    <View testID="input-view" style={styles.container}>
       <TextInput
         testID="text-input"
         style={styles.input}

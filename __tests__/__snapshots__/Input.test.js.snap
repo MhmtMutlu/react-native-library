@@ -15,6 +15,7 @@ exports[`should match snapshot 1`] = `
       "paddingVertical": 1,
     }
   }
+  testID="input-view"
 >
   <TextInput
     placeholderTextColor="#343a40"
@@ -47,4 +48,24 @@ exports[`should match snapshot 1`] = `
     
   </Text>
 </View>
+`;
+
+exports[`should render TextInputs css 1`] = `
+Object {
+  "flex": 1,
+}
+`;
+
+exports[`should render Views css 1`] = `
+Object {
+  "alignItems": "center",
+  "backgroundColor": "#e0e0e0",
+  "borderRadius": 10,
+  "color": "#343a40",
+  "flexDirection": "row",
+  "justifyContent": "center",
+  "margin": 10,
+  "paddingHorizontal": 10,
+  "paddingVertical": 1,
+}
 `;

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/Button/Button.js</title>
+    <title>Code coverage report for components/Input/Input.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/Button</a> Button.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/Input</a> Input.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -32,7 +32,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
@@ -87,7 +87,12 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,31 +115,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import {TouchableOpacity, Text, ActivityIndicator} from 'react-native';
+import {TextInput, View} from 'react-native';
 &nbsp;
-import styles from './Button.styles';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import colors from '../../assets/styles/colors';
 &nbsp;
-const Button = ({text, onPress, loading, theme = 'primary'}) =&gt; {
+import styles from './Input.styles';
+&nbsp;
+const Input = ({placeholder, value, onType, iconName, isSecure}) =&gt; {
   return (
-    &lt;TouchableOpacity
-      testID="button-touchable"
-      style={styles[theme].container}
-      onPress={onPress}
-      disabled={loading}&gt;
-      {loading ? (
-        &lt;ActivityIndicator testID="button-indicator" color="white" /&gt;
-      ) : (
-        &lt;Text testID="button-text" style={styles[theme].title}&gt;
-          {text}
-        &lt;/Text&gt;
-      )}
-    &lt;/TouchableOpacity&gt;
+    &lt;View testID="input-view" style={styles.container}&gt;
+      &lt;TextInput
+        testID="text-input"
+        style={styles.input}
+        value={value}
+        placeholder={placeholder}
+        onChangeText={onType}
+        secureTextEntry={isSecure}
+        placeholderTextColor={colors.darkGrey2x}
+      /&gt;
+      &lt;Icon name={iconName} size={25} color={colors.darkGrey2x} /&gt;
+    &lt;/View&gt;
   );
 };
 &nbsp;
-export default Button;
+export default Input;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
