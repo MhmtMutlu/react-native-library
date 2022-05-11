@@ -1,11 +1,14 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import styles from './FloatingButton.styles';
+import styles from './FloatingButton.syles';
 
 const FloatingButton = ({onPress, icon}) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      testID="floating-button"
+      style={styles.container}
+      onPress={onPress}>
       <Icon name={icon} color="white" size={30} />
     </TouchableOpacity>
   );
