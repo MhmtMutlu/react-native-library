@@ -2,7 +2,7 @@ import React from 'react';
 import {FlatList, SafeAreaView} from 'react-native';
 import FloatingButton from '../../components/FloatingButton';
 import ContentModal from '../../components/Modal/ContentModal';
-import styles from './Messages.styles';
+import styles from './Library.styles';
 
 const Library = () => {
   const [inputModalVisible, setInputModalVisible] = React.useState(true);

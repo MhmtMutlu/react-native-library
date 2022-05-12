@@ -6,7 +6,11 @@ import styles from './Login.styles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-const Login = () => {
+const Login = ({navigation}) => {
+  const submitHandler = () => {
+    navigation.navigate('LibraryScreen');
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logo_container}>
@@ -16,7 +20,9 @@ const Login = () => {
         />
         <Text style={styles.title}>Kitaplık</Text>
       </View>
-      <Formik initialValues={{email: '', password: ''}} onSubmit={() => null}>
+      <Formik
+        initialValues={{email: '', password: ''}}
+        onSubmit={submitHandler}>
         {({handleSubmit, handleChange, values}) => (
           <View style={styles.body_container}>
             <Input
