@@ -6,7 +6,7 @@ export default StyleSheet.create({
     paddingVertical: 1,
     paddingHorizontal: 10,
     borderRadius: 10,
-    margin: 10,
+    margin: 5,
     backgroundColor: colors.lightGrey3x,
     flexDirection: 'row',
     justifyContent: 'center',

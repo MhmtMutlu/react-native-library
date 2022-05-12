@@ -18,7 +18,7 @@ const Input = ({placeholder, value, onType, iconName, isSecure}) => {
         secureTextEntry={isSecure}
         placeholderTextColor={colors.darkGrey2x}
       />
-      <Icon name={iconName} size={25} color={colors.darkGrey2x} />
+      {iconName && <Icon name={iconName} size={25} color={colors.darkGrey2x} />}
     </View>
   );
 };

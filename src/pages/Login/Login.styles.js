@@ -4,13 +4,11 @@ import colors from '../../assets/styles/colors';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: colors.darkGrey2x,
   },
   logo_container: {
-    flex: 0.6,
+    flex: 0.5,
     backgroundColor: colors.darkGrey2x,
-    borderBottomLeftRadius: 50,
-    borderBottomRightRadius: 50,
     marginBottom: 20,
     flexDirection: 'column',
     justifyContent: 'center',
@@ -22,6 +20,13 @@ export default StyleSheet.create({
     resizeMode: 'contain',
   },
   title: {marginTop: 20, fontSize: 34, fontWeight: 'bold', color: colors.white},
-  body_container: {flex: 0.4},
+  body_container: {
+    flex: 0.5,
+    justifyContent: 'center',
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    backgroundColor: colors.white,
+    paddingHorizontal: 5,
+  },
   button_wrapper: {marginTop: 10},
 });

@@ -11,6 +11,6 @@ export default StyleSheet.create({
     height: 60,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.grey,
+    backgroundColor: colors.white,
   },
 });
