@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View} from 'react-native';
-import Button from '../Button';
-import Modal from 'react-native-modal';
-import styles from './ContentModal.styles';
 import {Formik} from 'formik';
+import Modal from 'react-native-modal';
+import DatePicker from 'react-native-date-picker';
+
+import Button from '../Button';
+import styles from './ContentModal.styles';
 import Input from '../Input';
 
 const initialValues = {
@@ -12,12 +14,15 @@ const initialValues = {
   bookSubject: '',
   bookPages: 0,
   quotes: '',
-  startDate: '',
-  endDate: '',
+  startDate: new Date(),
+  endDate: new Date(),
   imageUrl: '',
 };
 
 const ContentModal = ({isVisible, onSend, onClose}) => {
+  const [firstDateVisibility, setFirstDateVisibility] = useState(false);
+  const [secondDateVisibility, setSecondDateVisibility] = useState(false);
+
   return (
     <Modal
       style={styles.modal}
@@ -27,8 +32,10 @@ const ContentModal = ({isVisible, onSend, onClose}) => {
       onBackdropPress={onClose}
       onBackButtonPress={onClose}>
       <View style={styles.container}>
-        <Formik initialValues={initialValues} onSubmit={onSend}>
-          {({handleSubmit, handleChange, values}) => (
+        <Formik
+          initialValues={initialValues}
+          onSubmit={value => console.log(value)}>
+          {({handleSubmit, handleChange, setFieldValue, values}) => (
             <View style={styles.body_container}>
               <Input
                 value={values.bookName}
@@ -51,20 +58,55 @@ const ContentModal = ({isVisible, onSend, onClose}) => {
                 onChangeText={handleChange('quotes')}
               />
               <Input
-                value={values.startDate}
-                placeholder="Başlangıç tarihi ..."
-                onChangeText={handleChange('startDate')}
-              />
-              <Input
-                value={values.endDate}
-                placeholder="Başlangıç tarihi ..."
-                onChangeText={handleChange('endDate')}
-              />
-              <Input
                 value={values.imageUrl}
                 placeholder="Kitabın resmi ..."
                 onChangeText={handleChange('imageUrl')}
               />
+              <View style={styles.date_wrapper}>
+                <View style={styles.date}>
+                  <Button
+                    text="Başlangıç Tarihi"
+                    theme="secondary"
+                    onPress={() => setFirstDateVisibility(true)}
+                  />
+                  <DatePicker
+                    modal
+                    androidVariant="iosClone"
+                    open={firstDateVisibility}
+                    mode="date"
+                    date={values.startDate}
+                    onConfirm={date => {
+                      setFirstDateVisibility(false);
+                      console.log('DATE--->', date);
+                      setFieldValue('startDate', date);
+                    }}
+                    onCancel={() => {
+                      setFirstDateVisibility(false);
+                    }}
+                  />
+                </View>
+                <View style={styles.date}>
+                  <Button
+                    text="Bitiş Tarihi"
+                    theme="secondary"
+                    onPress={() => setSecondDateVisibility(true)}
+                  />
+                  <DatePicker
+                    modal
+                    androidVariant="iosClone"
+                    open={secondDateVisibility}
+                    mode="date"
+                    date={values.startDate}
+                    onConfirm={date => {
+                      setSecondDateVisibility(false);
+                      setFieldValue('endDate', date);
+                    }}
+                    onCancel={() => {
+                      setSecondDateVisibility(false);
+                    }}
+                  />
+                </View>
+              </View>
               <View style={styles.button_wrapper}>
                 <Button text="Kaydet" onPress={handleSubmit} />
               </View>

@@ -10,7 +10,7 @@ export default StyleSheet.create({
     padding: 5,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
-    height: deviceSize.height / 1.5,
+    height: deviceSize.height / 1.7,
   },
   modal: {
     justifyContent: 'flex-end',
@@ -22,6 +22,15 @@ export default StyleSheet.create({
     marginBottom: 15,
     marginHorizontal: 5,
     backgroundColor: colors.lightGrey3x,
+  },
+  date_wrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  date: {
+    flex: 0.5,
   },
   button_wrapper: {
     marginTop: 15,
