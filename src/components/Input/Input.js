@@ -6,10 +6,19 @@ import colors from '../../assets/styles/colors';
 
 import styles from './Input.styles';
 
-const Input = ({placeholder, value, onType, iconName, isSecure}) => {
+const Input = ({
+  placeholder,
+  value,
+  onType,
+  iconName,
+  isSecure,
+  isMultiline = false,
+}) => {
   return (
     <View testID="input-view" style={styles.container}>
       <TextInput
+        multiline={isMultiline}
+        numberOfLines={isMultiline ? 6 : null}
         testID="text-input"
         style={styles.input}
         value={value}
@@ -17,6 +26,7 @@ const Input = ({placeholder, value, onType, iconName, isSecure}) => {
         onChangeText={onType}
         secureTextEntry={isSecure}
         placeholderTextColor={colors.darkGrey2x}
+        textAlignVertical={isMultiline ? 'top' : null}
       />
       {iconName && <Icon name={iconName} size={25} color={colors.darkGrey2x} />}
     </View>

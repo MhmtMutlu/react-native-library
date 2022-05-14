@@ -16,7 +16,6 @@ const initialValues = {
   quotes: '',
   startDate: new Date(),
   endDate: new Date(),
-  imageUrl: '',
 };
 
 const ContentModal = ({isVisible, onSend, onClose}) => {
@@ -40,27 +39,23 @@ const ContentModal = ({isVisible, onSend, onClose}) => {
               <Input
                 value={values.bookName}
                 placeholder="Kitap adı ..."
-                onChangeText={handleChange('bookName')}
+                onType={handleChange('bookName')}
               />
               <Input
                 value={values.writer}
                 placeholder="Yazarı ..."
-                onChangeText={handleChange('writer')}
+                onType={handleChange('writer')}
               />
               <Input
                 value={values.bookSubject}
                 placeholder="Kitabın konusu ..."
-                onChangeText={handleChange('bookSubject')}
+                onType={handleChange('bookSubject')}
               />
               <Input
+                isMultiline={true}
                 value={values.quotes}
                 placeholder="Alıntılar ..."
-                onChangeText={handleChange('quotes')}
-              />
-              <Input
-                value={values.imageUrl}
-                placeholder="Kitabın resmi ..."
-                onChangeText={handleChange('imageUrl')}
+                onType={handleChange('quotes')}
               />
               <View style={styles.date_wrapper}>
                 <View style={styles.date}>
@@ -96,7 +91,7 @@ const ContentModal = ({isVisible, onSend, onClose}) => {
                     androidVariant="iosClone"
                     open={secondDateVisibility}
                     mode="date"
-                    date={values.startDate}
+                    date={values.endDate}
                     onConfirm={date => {
                       setSecondDateVisibility(false);
                       setFieldValue('endDate', date);
