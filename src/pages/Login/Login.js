@@ -43,7 +43,7 @@ const Login = ({navigation}) => {
               <Button
                 text="Kayıt Ol"
                 theme="secondary"
-                onPress={handleSubmit}
+                onPress={() => navigation.navigate('RegisterScreen')}
               />
             </View>
           </View>

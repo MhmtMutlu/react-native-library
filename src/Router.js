@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Library from './pages/Library';
 
 const Stack = createNativeStackNavigator();
@@ -14,6 +15,13 @@ const Router = () => {
         <Stack.Screen
           name="LoginScreen"
           component={Login}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="RegisterScreen"
+          component={Register}
           options={{
             headerShown: false,
           }}
