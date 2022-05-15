@@ -15,7 +15,7 @@ exports[`should match with snapshot 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#6c757d",
+      "backgroundColor": "#f8f9fa",
       "borderRadius": 50,
       "bottom": 20,
       "height": 60,
@@ -34,7 +34,7 @@ exports[`should match with snapshot 1`] = `
     style={
       Array [
         Object {
-          "color": "white",
+          "color": "#343a40",
           "fontSize": 30,
         },
         undefined,
@@ -55,7 +55,7 @@ exports[`should match with snapshot 1`] = `
 exports[`should render FloatingButton css 1`] = `
 Object {
   "alignItems": "center",
-  "backgroundColor": "#6c757d",
+  "backgroundColor": "#f8f9fa",
   "borderRadius": 50,
   "bottom": 20,
   "height": 60,
