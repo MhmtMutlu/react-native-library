@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
+import auth from '@react-native-firebase/auth';
 
 import styles from './Register.styles';
 import Input from '../../components/Input';
@@ -13,8 +14,24 @@ const initialForm = {
 };
 
 const Register = ({navigation}) => {
-  const submitHandler = () => {
-    navigation.navigate('LibraryScreen');
+  const [loading, setLoading] = useState(false);
+
+  const handleSignUp = async formValues => {
+    setLoading(true);
+    if (formValues.password !== formValues.rePassword) {
+      setLoading(false);
+      return;
+    }
+    try {
+      await auth().createUserWithEmailAndPassword(
+        formValues.email,
+        formValues.password,
+      );
+      navigation.navigate('LoginScreen');
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   return (
@@ -26,7 +43,7 @@ const Register = ({navigation}) => {
         />
         <Text style={styles.title}>Kayıt Ol</Text>
       </View>
-      <Formik initialValues={initialForm} onSubmit={submitHandler}>
+      <Formik initialValues={initialForm} onSubmit={handleSignUp}>
         {({handleSubmit, handleChange, values}) => (
           <View style={styles.body_container}>
             <Input

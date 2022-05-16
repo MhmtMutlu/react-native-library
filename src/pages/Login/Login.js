@@ -1,14 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
 import {Formik} from 'formik';
+import auth from '@react-native-firebase/auth';
 
 import styles from './Login.styles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 const Login = ({navigation}) => {
-  const submitHandler = () => {
-    navigation.navigate('LibraryScreen');
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async formValues => {
+    try {
+      setLoading(true);
+      await auth().signInWithEmailAndPassword(
+        formValues.email,
+        formValues.password,
+      );
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   return (
@@ -20,9 +32,7 @@ const Login = ({navigation}) => {
         />
         <Text style={styles.title}>Kitaplık</Text>
       </View>
-      <Formik
-        initialValues={{email: '', password: ''}}
-        onSubmit={submitHandler}>
+      <Formik initialValues={{email: '', password: ''}} onSubmit={handleLogin}>
         {({handleSubmit, handleChange, values}) => (
           <View style={styles.body_container}>
             <Input
