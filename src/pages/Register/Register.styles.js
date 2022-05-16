@@ -7,7 +7,7 @@ export default StyleSheet.create({
     backgroundColor: colors.darkGrey2x,
   },
   logo_container: {
-    flex: 0.3,
+    flex: 0.2,
     backgroundColor: colors.darkGrey2x,
     marginBottom: 20,
     flexDirection: 'row',
@@ -26,7 +26,7 @@ export default StyleSheet.create({
     paddingLeft: 30,
   },
   body_container: {
-    flex: 0.7,
+    flex: 0.8,
     justifyContent: 'center',
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
@@ -34,4 +34,5 @@ export default StyleSheet.create({
     paddingHorizontal: 5,
   },
   button_wrapper: {marginTop: 30},
+  error: {fontSize: 10, color: 'red', paddingLeft: 10},
 });

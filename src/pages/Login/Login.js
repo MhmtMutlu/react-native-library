@@ -6,6 +6,7 @@ import auth from '@react-native-firebase/auth';
 import styles from './Login.styles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import {loginValidationSchema} from '../../validation';
 
 const Login = ({navigation}) => {
   const [loading, setLoading] = useState(false);
@@ -32,8 +33,11 @@ const Login = ({navigation}) => {
         />
         <Text style={styles.title}>Kitaplık</Text>
       </View>
-      <Formik initialValues={{email: '', password: ''}} onSubmit={handleLogin}>
-        {({handleSubmit, handleChange, values}) => (
+      <Formik
+        validationSchema={loginValidationSchema}
+        initialValues={{email: '', password: ''}}
+        onSubmit={handleLogin}>
+        {({handleSubmit, handleChange, values, errors}) => (
           <View style={styles.body_container}>
             <Input
               placeholder="Email ..."
@@ -41,6 +45,7 @@ const Login = ({navigation}) => {
               onType={handleChange('email')}
               iconName="account"
             />
+            {errors.email && <Text style={styles.error}>{errors.email}</Text>}
             <Input
               isSecure
               placeholder="Şifre ..."
@@ -48,6 +53,9 @@ const Login = ({navigation}) => {
               onType={handleChange('password')}
               iconName="key"
             />
+            {errors.password && (
+              <Text style={styles.error}>{errors.password}</Text>
+            )}
             <View style={styles.button_wrapper}>
               <Button text="Giriş Yap" onPress={handleSubmit} />
               <Button

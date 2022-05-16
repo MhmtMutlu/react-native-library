@@ -6,9 +6,10 @@ import auth from '@react-native-firebase/auth';
 import styles from './Register.styles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import {registerValidationSchema} from '../../validation';
 
 const initialForm = {
-  mail: '',
+  email: '',
   password: '',
   rePassword: '',
 };
@@ -43,8 +44,11 @@ const Register = ({navigation}) => {
         />
         <Text style={styles.title}>Kayıt Ol</Text>
       </View>
-      <Formik initialValues={initialForm} onSubmit={handleSignUp}>
-        {({handleSubmit, handleChange, values}) => (
+      <Formik
+        validationSchema={registerValidationSchema}
+        initialValues={initialForm}
+        onSubmit={handleSignUp}>
+        {({handleSubmit, handleChange, values, errors}) => (
           <View style={styles.body_container}>
             <Input
               placeholder="Email adresinizi giriniz .."
@@ -52,6 +56,7 @@ const Register = ({navigation}) => {
               onType={handleChange('email')}
               iconName="account"
             />
+            {errors.email && <Text style={styles.error}>{errors.email}</Text>}
             <Input
               isSecure
               placeholder="Şifrenizi giriniz .."
@@ -59,6 +64,9 @@ const Register = ({navigation}) => {
               onType={handleChange('password')}
               iconName="key"
             />
+            {errors.password && (
+              <Text style={styles.error}>{errors.password}</Text>
+            )}
             <Input
               isSecure
               placeholder="Şifrenizi tekrar giriniz .."
@@ -66,6 +74,9 @@ const Register = ({navigation}) => {
               onType={handleChange('rePassword')}
               iconName="key"
             />
+            {errors.rePassword && (
+              <Text style={styles.error}>{errors.rePassword}</Text>
+            )}
             <View style={styles.button_wrapper}>
               <Button text="Kayıt Ol" onPress={handleSubmit} />
               <Button
