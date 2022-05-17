@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 import {Image, SafeAreaView, Text, View} from 'react-native';
+
 import {Formik} from 'formik';
 import auth from '@react-native-firebase/auth';
+import {showMessage} from 'react-native-flash-message';
 
 import styles from './Login.styles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import {loginValidationSchema} from '../../validation';
+import colors from '../../assets/styles/colors';
+import authErrorMessageParser from '../../utils/authErrorMessageParser';
 
 const Login = ({navigation}) => {
   const [loading, setLoading] = useState(false);
@@ -20,6 +24,12 @@ const Login = ({navigation}) => {
       );
       setLoading(false);
     } catch (error) {
+      showMessage({
+        message: authErrorMessageParser(error.code),
+        type: 'default',
+        backgroundColor: colors.lightGrey3x,
+        color: colors.darkGrey2x,
+      });
       setLoading(false);
     }
   };

@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
+
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import FlashMessage from 'react-native-flash-message';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -75,6 +77,7 @@ const Router = () => {
           />
         )}
       </Stack.Navigator>
+      <FlashMessage position="top" />
     </NavigationContainer>
   );
 };
