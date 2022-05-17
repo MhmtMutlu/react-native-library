@@ -11,6 +11,7 @@ import Button from '../../components/Button';
 import {loginValidationSchema} from '../../validation';
 import colors from '../../assets/styles/colors';
 import authErrorMessageParser from '../../utils/authErrorMessageParser';
+import Loading from '../../components/Loading';
 
 const Login = ({navigation}) => {
   const [loading, setLoading] = useState(false);
@@ -33,6 +34,10 @@ const Login = ({navigation}) => {
       setLoading(false);
     }
   };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <SafeAreaView style={styles.container}>
