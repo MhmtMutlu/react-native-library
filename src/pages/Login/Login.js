@@ -67,11 +67,16 @@ const Login = ({navigation}) => {
               <Text style={styles.error}>{errors.password}</Text>
             )}
             <View style={styles.button_wrapper}>
-              <Button text="Giriş Yap" onPress={handleSubmit} />
+              <Button
+                text="Giriş Yap"
+                onPress={handleSubmit}
+                loading={loading}
+              />
               <Button
                 text="Kayıt Ol"
                 theme="secondary"
                 onPress={() => navigation.navigate('RegisterScreen')}
+                loading={loading}
               />
             </View>
           </View>

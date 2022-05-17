@@ -88,11 +88,16 @@ const Register = ({navigation}) => {
               <Text style={styles.error}>{errors.rePassword}</Text>
             )}
             <View style={styles.button_wrapper}>
-              <Button text="Kayıt Ol" onPress={handleSubmit} />
+              <Button
+                text="Kayıt Ol"
+                onPress={handleSubmit}
+                loading={loading}
+              />
               <Button
                 text="Zaten Hesabım Var"
                 theme="secondary"
                 onPress={() => navigation.navigate('LoginScreen')}
+                loading={loading}
               />
             </View>
           </View>
