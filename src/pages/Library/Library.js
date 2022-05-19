@@ -1,7 +1,10 @@
 import React from 'react';
 import {FlatList, SafeAreaView} from 'react-native';
+
+import Card from '../../components/Card';
 import FloatingButton from '../../components/FloatingButton';
 import ContentModal from '../../components/Modal/ContentModal';
+
 import styles from './Library.styles';
 
 const Library = () => {
@@ -15,9 +18,16 @@ const Library = () => {
     setInputModalVisible(!inputModalVisible);
   };
 
+  const renderContent = ({item}) => (
+    <Card message={item} onPress={() => null} />
+  );
+
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList data={[]} renderItem={() => null} />
+      <FlatList
+        data={[{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]}
+        renderItem={renderContent}
+      />
       <FloatingButton icon="plus" onPress={handleModalToggle} />
       <ContentModal
         isVisible={inputModalVisible}
