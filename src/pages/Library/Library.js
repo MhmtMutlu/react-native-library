@@ -5,7 +5,7 @@ import ContentModal from '../../components/Modal/ContentModal';
 import styles from './Library.styles';
 
 const Library = () => {
-  const [inputModalVisible, setInputModalVisible] = React.useState(true);
+  const [inputModalVisible, setInputModalVisible] = React.useState(false);
 
   const handleModalClose = () => {
     setInputModalVisible(false);
