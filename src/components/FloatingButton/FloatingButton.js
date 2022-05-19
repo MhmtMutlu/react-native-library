@@ -10,7 +10,7 @@ const FloatingButton = ({onPress, icon}) => {
       testID="floating-button"
       style={styles.container}
       onPress={onPress}>
-      <Icon name={icon} color={colors.darkGrey2x} size={30} />
+      <Icon name={icon} color={colors.darkGrey2x} size={35} />
     </TouchableOpacity>
   );
 };
