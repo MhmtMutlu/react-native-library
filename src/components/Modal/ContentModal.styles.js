@@ -10,7 +10,7 @@ export default StyleSheet.create({
     padding: 5,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
-    height: deviceSize.height / 1.6,
+    height: deviceSize.height / 1.7,
   },
   modal: {
     justifyContent: 'flex-end',

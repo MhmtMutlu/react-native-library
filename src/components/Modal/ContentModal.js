@@ -12,7 +12,6 @@ const initialValues = {
   bookName: '',
   writer: '',
   bookSubject: '',
-  bookPages: 0,
   quotes: '',
   startDate: new Date(),
   endDate: new Date(),
@@ -31,9 +30,7 @@ const ContentModal = ({isVisible, onSend, onClose}) => {
       onBackdropPress={onClose}
       onBackButtonPress={onClose}>
       <View style={styles.container}>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={value => console.log(value)}>
+        <Formik initialValues={initialValues} onSubmit={value => onSend(value)}>
           {({handleSubmit, handleChange, setFieldValue, values}) => (
             <View style={styles.body_container}>
               <Input
