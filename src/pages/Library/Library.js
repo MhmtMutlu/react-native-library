@@ -15,7 +15,6 @@ const Library = () => {
   const [inputModalVisible, setInputModalVisible] = useState(false);
   const [contentList, setContentList] = useState([]);
   const userMail = auth().currentUser.email.replace('.', '');
-  console.log('userMail', userMail);
 
   useEffect(() => {
     database()
