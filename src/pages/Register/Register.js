@@ -11,6 +11,7 @@ import Button from '../../components/Button';
 import {registerValidationSchema} from '../../validation';
 import authErrorMessageParser from '../../utils/authErrorMessageParser';
 import colors from '../../assets/styles/colors';
+import PasswordModal from '../../components/Modal/PasswordModal/PasswordModal';
 
 const initialForm = {
   email: '',
@@ -20,6 +21,7 @@ const initialForm = {
 
 const Register = ({navigation}) => {
   const [loading, setLoading] = useState(false);
+  const [modalVisibility, setModalVisibility] = useState(false);
 
   const handleSignUp = async formValues => {
     setLoading(true);
@@ -72,6 +74,7 @@ const Register = ({navigation}) => {
               placeholder="Şifrenizi giriniz .."
               value={values.password}
               onType={handleChange('password')}
+              handleIconPress={() => setModalVisibility(true)}
               iconName="key"
             />
             {errors.password && (
@@ -82,6 +85,7 @@ const Register = ({navigation}) => {
               placeholder="Şifrenizi tekrar giriniz .."
               value={values.rePassword}
               onType={handleChange('rePassword')}
+              handleIconPress={() => setModalVisibility(true)}
               iconName="key"
             />
             {errors.rePassword && (
@@ -103,6 +107,10 @@ const Register = ({navigation}) => {
           </View>
         )}
       </Formik>
+      <PasswordModal
+        isVisible={modalVisibility}
+        onClose={() => setModalVisibility(false)}
+      />
     </SafeAreaView>
   );
 };
