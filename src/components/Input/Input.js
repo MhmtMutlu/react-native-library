@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextInput, View} from 'react-native';
+import {TextInput, TouchableOpacity, View} from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../assets/styles/colors';
@@ -12,6 +12,7 @@ const Input = ({
   onType,
   iconName,
   isSecure,
+  handleIconPress,
   isMultiline = false,
 }) => {
   return (
@@ -28,7 +29,13 @@ const Input = ({
         placeholderTextColor={colors.darkGrey2x}
         textAlignVertical={isMultiline ? 'top' : null}
       />
-      {iconName && <Icon name={iconName} size={25} color={colors.darkGrey2x} />}
+      {iconName && iconName === 'key' ? (
+        <TouchableOpacity onPress={handleIconPress}>
+          <Icon name={iconName} size={25} color={colors.darkGrey2x} />
+        </TouchableOpacity>
+      ) : (
+        <Icon name={iconName} size={25} color={colors.darkGrey2x} />
+      )}
     </View>
   );
 };
