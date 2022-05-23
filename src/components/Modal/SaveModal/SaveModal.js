@@ -24,13 +24,14 @@ const SaveModal = ({isVisible, onSend, onClose}) => {
 
   return (
     <Modal
+      testID="test-save-modal"
       style={styles.modal}
       isVisible={isVisible}
       swipeDirection="down"
       onSwipeComplete={onClose}
       onBackdropPress={onClose}
       onBackButtonPress={onClose}>
-      <View style={styles.container}>
+      <View testID="test-save-modal-container" style={styles.container}>
         <Formik initialValues={initialValues} onSubmit={value => onSend(value)}>
           {({handleSubmit, handleChange, setFieldValue, values}) => (
             <View style={styles.body_container}>

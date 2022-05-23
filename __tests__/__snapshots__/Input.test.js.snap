@@ -29,6 +29,27 @@ exports[`should match snapshot 1`] = `
     testID="text-input"
     textAlignVertical={null}
   />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      Array [
+        Object {
+          "color": "#343a40",
+          "fontSize": 25,
+        },
+        undefined,
+        Object {
+          "fontFamily": "Material Design Icons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
 </View>
 `;
 

@@ -44,7 +44,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(@react-native|react-native|react-native-vector-icons|react-native-modal)/)"
+      "node_modules/(?!(@react-native|react-native|react-native-vector-icons|react-native-modal|react-native-animatable|react-native-date-picker)/)"
     ]
   }
 }

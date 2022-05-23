@@ -16,6 +16,7 @@ const ContentModal = ({isVisible, onUpdate, onClose, onDelete, itemValues}) => {
 
   return (
     <Modal
+      testID="test-content-modal"
       coverScreen={true}
       style={styles.modal}
       isVisible={isVisible}
@@ -23,7 +24,7 @@ const ContentModal = ({isVisible, onUpdate, onClose, onDelete, itemValues}) => {
       onSwipeComplete={onClose}
       onBackdropPress={onClose}
       onBackButtonPress={onClose}>
-      <View style={styles.container}>
+      <View testID="test-content-modal-container" style={styles.container}>
         <Formik
           initialValues={initialValues}
           onSubmit={value => onUpdate(value, initialValues.id)}>

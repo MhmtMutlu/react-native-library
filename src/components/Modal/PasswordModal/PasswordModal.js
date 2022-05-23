@@ -13,13 +13,14 @@ const PasswordModal = ({isVisible, onClose}) => {
 
   return (
     <Modal
+      testID="test-password-modal"
       style={styles.modal}
       isVisible={isVisible}
       swipeDirection="down"
       onSwipeComplete={onClose}
       onBackdropPress={onClose}
       onBackButtonPress={onClose}>
-      <View style={styles.container}>
+      <View testID="test-password-modal-container" style={styles.container}>
         {modalItem('Şifreniz en az 1 adet küçük karakter içermelidir!', 1)}
         {modalItem('Şifreniz en az 1 adet büyük karakter içermelidir!', 2)}
         {modalItem('Şifreniz en az 1 adet sayı içermelidir!', 3)}

@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match with snapshot 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#e0e0e0",
+      "borderBottomLeftRadius": 50,
+      "borderRadius": 5,
+      "borderTopLeftRadius": 50,
+      "elevation": 10,
+      "flex": 1,
+      "flexDirection": "row",
+      "height": 80,
+      "margin": 10,
+      "opacity": 1,
+      "padding": 5,
+      "shadowColor": "#6c757d",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 15,
+    }
+  }
+  testID="test-card"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.2,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#343a40",
+          "borderColor": "#e0e0e0",
+          "borderRadius": 50,
+          "borderWidth": 1,
+          "color": "#e0e0e0",
+          "height": 78,
+          "justifyContent": "center",
+          "width": 80,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#e0e0e0",
+            "fontSize": 28,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        1
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 0.8,
+        "justifyContent": "center",
+        "paddingLeft": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#343a40",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      test book
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 14,
+          "fontStyle": "italic",
+        }
+      }
+    >
+      test writer
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should render Card css 1`] = `
+Object {
+  "backgroundColor": "#e0e0e0",
+  "borderBottomLeftRadius": 50,
+  "borderRadius": 5,
+  "borderTopLeftRadius": 50,
+  "elevation": 10,
+  "flex": 1,
+  "flexDirection": "row",
+  "height": 80,
+  "margin": 10,
+  "opacity": 1,
+  "padding": 5,
+  "shadowColor": "#6c757d",
+  "shadowOffset": Object {
+    "height": 1,
+    "width": 0,
+  },
+  "shadowOpacity": 0.5,
+  "shadowRadius": 15,
+}
+`;

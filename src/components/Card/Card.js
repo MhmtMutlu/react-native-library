@@ -5,7 +5,10 @@ import styles from './Card.styles';
 
 const Card = ({cardData, index, onPress}) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      testID="test-card"
+      style={styles.container}
+      onPress={onPress}>
       <View style={styles.left_container}>
         <View style={styles.circle}>
           <Text style={styles.circle_text}>{index}</Text>

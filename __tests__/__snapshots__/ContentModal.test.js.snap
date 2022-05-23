@@ -1,0 +1,532 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match with snapshot 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={false}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    Array [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeDirection="down"
+  swipeThreshold={100}
+  testID="test-content-modal"
+  transparent={true}
+  visible={true}
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    forwardedRef={[Function]}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    forwardedRef={[Function]}
+    hideModalContentWhileAnimating={false}
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 7.5,
+        "margin": 37.5,
+        "marginVertical": 20,
+        "position": "absolute",
+        "right": 7.5,
+        "top": 15,
+        "transform": Array [
+          Object {
+            "translateY": 1334,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeDirection="down"
+    swipeThreshold={100}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#f8f9fa",
+          "borderRadius": 15,
+          "height": 952.8571428571429,
+          "padding": 5,
+          "paddingTop": 15,
+        }
+      }
+      testID="test-content-modal-container"
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#e0e0e0",
+              "borderRadius": 10,
+              "color": "#343a40",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "margin": 5,
+              "paddingHorizontal": 10,
+              "paddingVertical": 1,
+            }
+          }
+          testID="input-view"
+        >
+          <TextInput
+            multiline={false}
+            numberOfLines={null}
+            onChangeText={[Function]}
+            placeholder="Kitap adı ..."
+            placeholderTextColor="#343a40"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+            testID="text-input"
+            textAlignVertical={null}
+            value="test book"
+          />
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343a40",
+                  "fontSize": 25,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Design Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#e0e0e0",
+              "borderRadius": 10,
+              "color": "#343a40",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "margin": 5,
+              "paddingHorizontal": 10,
+              "paddingVertical": 1,
+            }
+          }
+          testID="input-view"
+        >
+          <TextInput
+            multiline={false}
+            numberOfLines={null}
+            onChangeText={[Function]}
+            placeholder="Yazarı ..."
+            placeholderTextColor="#343a40"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+            testID="text-input"
+            textAlignVertical={null}
+            value="test writer"
+          />
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343a40",
+                  "fontSize": 25,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Design Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#e0e0e0",
+              "borderRadius": 10,
+              "color": "#343a40",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "margin": 5,
+              "paddingHorizontal": 10,
+              "paddingVertical": 1,
+            }
+          }
+          testID="input-view"
+        >
+          <TextInput
+            multiline={true}
+            numberOfLines={6}
+            onChangeText={[Function]}
+            placeholder="Kitabın konusu ..."
+            placeholderTextColor="#343a40"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+            testID="text-input"
+            textAlignVertical="top"
+            value="test subject"
+          />
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343a40",
+                  "fontSize": 25,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Design Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#e0e0e0",
+              "borderRadius": 10,
+              "color": "#343a40",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "margin": 5,
+              "paddingHorizontal": 10,
+              "paddingVertical": 1,
+            }
+          }
+          testID="input-view"
+        >
+          <TextInput
+            multiline={true}
+            numberOfLines={6}
+            onChangeText={[Function]}
+            placeholder="Alıntılar ..."
+            placeholderTextColor="#343a40"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+            testID="text-input"
+            textAlignVertical="top"
+            value="test quotes"
+          />
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#343a40",
+                  "fontSize": 25,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Design Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 0.5,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#e0e0e0",
+                  "borderRadius": 10,
+                  "margin": 5,
+                  "opacity": 1,
+                  "padding": 10,
+                }
+              }
+              testID="button-touchable"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#343a40",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                  }
+                }
+                testID="button-text"
+              >
+                Başlangıç Tarihi
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 0.5,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#e0e0e0",
+                  "borderRadius": 10,
+                  "margin": 5,
+                  "opacity": 1,
+                  "padding": 10,
+                }
+              }
+              testID="button-touchable"
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#343a40",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                  }
+                }
+                testID="button-text"
+              >
+                Bitiş Tarihi
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 10,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#343a40",
+                "borderRadius": 10,
+                "margin": 5,
+                "opacity": 1,
+                "padding": 10,
+              }
+            }
+            testID="button-touchable"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#f8f9fa",
+                  "fontSize": 17,
+                  "fontWeight": "bold",
+                }
+              }
+              testID="button-text"
+            >
+              Güncelle
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#e0e0e0",
+                "borderRadius": 10,
+                "margin": 5,
+                "opacity": 1,
+                "padding": 10,
+              }
+            }
+            testID="button-touchable"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#343a40",
+                  "fontSize": 17,
+                  "fontWeight": "bold",
+                }
+              }
+              testID="button-text"
+            >
+              Sil
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
+
+exports[`should render ContentModal css 1`] = `
+Object {
+  "backgroundColor": "#f8f9fa",
+  "borderRadius": 15,
+  "height": 952.8571428571429,
+  "padding": 5,
+  "paddingTop": 15,
+}
+`;
