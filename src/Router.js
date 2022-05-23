@@ -17,9 +17,13 @@ const Router = () => {
   const [userSession, setUserSession] = useState();
 
   useEffect(() => {
-    auth().onAuthStateChanged(user => {
+    const unsubscribe = auth().onAuthStateChanged(user => {
       setUserSession(!!user);
     });
+
+    return () => {
+      unsubscribe();
+    };
   });
 
   const AuthStack = () => (
