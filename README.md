@@ -7,6 +7,8 @@
 
 # 📌 Installation
 
+🚧 If you want to install project, you should make <a href="https://rnfirebase.io/">Firebase configurations.</a>
+
 ### Clone
    ```bash
    git clone https://github.com/MhmtMutlu/react-native-library.git
@@ -24,11 +26,7 @@
 
 # 🎞 Screenshot
 
-![Proje Resmi](src/assets/images/ss1.png)
-![Proje Resmi](src/assets/images/ss2.png)
-![Proje Resmi](src/assets/images/ss3.png)
-![Proje Resmi](src/assets/images/ss4.png)
-![Proje Resmi](src/assets/images/ss5.png)
+![Proje Resmi](src/assets/images/ss.png)
 
 # 🧰 Technologies
 
